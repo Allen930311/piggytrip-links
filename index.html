@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>旅費小豬｜機票快查</title>
+<meta name="description" content="旅費小豬整理的機票查價入口。">
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg: #fdf7f3; --fg: #2b2320; --muted: #7a6a62;
+    --card: #ffffff; --border: #ecdfd6; --accent: #e0654a; --shadow: rgba(43,35,32,.07);
+  }
+  :root:not([data-theme="light"]) { }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17120f; --fg: #f3e9e3; --muted: #a89890;
+      --card: #221b17; --border: #34291f; --accent: #f0836a; --shadow: rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17120f; --fg: #f3e9e3; --muted: #a89890;
+    --card: #221b17; --border: #34291f; --accent: #f0836a; --shadow: rgba(0,0,0,.4);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 30rem; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+  header { text-align: center; margin-bottom: 2rem; }
+  .avatar {
+    width: 4.5rem; height: 4.5rem; border-radius: 50%; background: var(--card);
+    border: 1px solid var(--border); display: grid; place-items: center;
+    font-size: 2.25rem; margin: 0 auto .75rem;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .15rem; letter-spacing: .02em; }
+  .handle { color: var(--muted); font-size: .85rem; margin: 0 0 .5rem; }
+  .tagline { color: var(--fg); font-size: .95rem; margin: 0; opacity: .85; }
+  .cards { display: flex; flex-direction: column; gap: .7rem; }
+  .card {
+    display: flex; align-items: center; gap: .85rem; text-decoration: none; color: inherit;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: .95rem 1.1rem; box-shadow: 0 1px 2px var(--shadow);
+    transition: transform .12s ease, border-color .12s ease;
+  }
+  .card:hover, .card:focus-visible { transform: translateY(-1px); border-color: var(--accent); }
+  .flag { font-size: 1.5rem; line-height: 1; }
+  .text { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+  .title { font-weight: 600; font-size: 1rem; }
+  .subtitle { color: var(--muted); font-size: .82rem; }
+  .arrow { color: var(--accent); font-size: 1.1rem; }
+  .notice {
+    margin-top: 1.5rem; padding: .8rem 1rem; border-radius: 12px;
+    background: transparent; border: 1px dashed var(--border);
+    color: var(--muted); font-size: .8rem;
+  }
+  footer { margin-top: 1.75rem; text-align: center; }
+  .chip {
+    display: inline-block; text-decoration: none; color: var(--muted);
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: .35rem .9rem; font-size: .82rem; margin: 0 .2rem;
+  }
+  .chip:hover { color: var(--accent); border-color: var(--accent); }
+  .built { margin-top: 1.25rem; text-align: center; color: var(--muted); font-size: .72rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="avatar" aria-hidden="true">🐷</div>
+    <h1>旅費小豬</h1>
+    <p class="handle">@piggytrip_tw</p>
+    <p class="tagline">每天巡一張機票</p>
+  </header>
+
+  <section class="cards">
+      <a class="card" href="https://tw.trip.com/flights/taipei-to-tokyo/airfares-tpe-tyo/?Allianceid=9899793&amp;SID=327843846&amp;trip_sub1=threads_tokyo_01&amp;trip_sub3=D19255315" target="_blank" rel="noopener">
+        <span class="flag">🇯🇵</span>
+        <span class="text">
+          <span class="title">台北 → 東京</span>
+          <span class="subtitle">查即時票價（含成田／羽田）</span>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="card" href="https://tw.trip.com/flights/Taipei-to-Seoul/tickets-TPE-SEL?flighttype=S&amp;dcity=TPE&amp;acity=SEL&amp;Allianceid=9899793&amp;SID=327843846&amp;trip_sub1=threads_seoul_01&amp;trip_sub3=D19153808" target="_blank" rel="noopener">
+        <span class="flag">🇰🇷</span>
+        <span class="text">
+          <span class="title">台北 → 首爾</span>
+          <span class="subtitle">查即時票價（含仁川／金浦）</span>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="card" href="https://tw.trip.com/flights/taipei-to-bangkok/tickets-tpe-bkk/?ddate=2026-09-29&amp;flighttype=s&amp;departcitycode=tpe&amp;arrivalcitycode=bkk&amp;sort=price&amp;curr=TWD&amp;locale=zh-TW&amp;Allianceid=9899793&amp;SID=327843846&amp;trip_sub1=threads_bangkok_01&amp;trip_sub3=D19256183" target="_blank" rel="noopener">
+        <span class="flag">🇹🇭</span>
+        <span class="text">
+          <span class="title">台北 → 曼谷</span>
+          <span class="subtitle">9/29 單程專頁</span>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+  </section>
+
+  <p class="notice">價格與供應會隨時變動，請以 Trip.com 即時頁面為準。</p>
+
+  <footer>
+      <a class="chip" href="https://www.threads.com/@piggytrip_tw" target="_blank" rel="noopener">🧵 Threads</a>
+  </footer>
+
+  <p class="built">更新於 2026-08-18</p>
+</main>
+</body>
+</html>
