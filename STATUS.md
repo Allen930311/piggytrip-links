@@ -1,6 +1,6 @@
 # PiggyTrip Links — Status
 
-> Last reviewed: 2026-10-08
+> Last reviewed: 2026-11-14 (since 2026-10-08 only image assets were added by `chore(img)` commits on 2026-11-06 to 2026-11-08; deployment boundary unchanged)
 
 ## Lifecycle
 
